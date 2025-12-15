@@ -24,7 +24,7 @@ var x  = 1.0D;
 var pi = 1.0D + Vector.Sum(pivec);
 
 for (var i = vend; i < rounds; ++i) {
-    x  = -x;
+    x = -x;
     pi += x / (2 * i - 1);
 }
 
