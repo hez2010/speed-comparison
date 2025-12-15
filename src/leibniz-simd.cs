@@ -14,8 +14,7 @@ var pivec = Vector<double>.Zero;
 rounds += 2;
 var vend = rounds - ((rounds - 2) % unroll);
 
-for (var i = 2u; i < vend; i += unroll)
-{
+for (var i = 2u; i < vend; i += unroll) {
     den = (two * ivec) + mone;
     ivec += inc;
     pivec += xvec / den;
@@ -24,8 +23,7 @@ for (var i = 2u; i < vend; i += unroll)
 var x = 1.0D;
 var pi = 1.0D + Vector.Sum(pivec);
 
-for (var i = vend; i < rounds; ++i)
-{
+for (var i = vend; i < rounds; ++i) {
     x = -x;
     pi += x / (2 * i - 1);
 }
